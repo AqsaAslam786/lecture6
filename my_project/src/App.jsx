@@ -1,25 +1,33 @@
-import Total_members from "./Component/Total_members"
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
-  
+  const [count, setCount] = useState(0)
 
   return (
-    < >
-    <div className="flex">
-
-    <div className="h-28 w-1/4">
-    <Total_members num="12768" title="Total Members "/>
-    </div>
-    <div className="h-28 w-1/4">
-    <Total_members num="39265" title="Total Posts"/>
-    </div>
-    <div className="h-28 w-1/4">
-    <Total_members num="142334" title="Total Comments"/>
-    </div>
-    <div className="h-28 w-1/4">
-    <Total_members num="34.14%" title="Server Load"/>
-    </div>
-    </div>
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
   )
 }
